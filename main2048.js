@@ -134,7 +134,8 @@ document.addEventListener("touchstart", function(event){//获取用户起始坐�
 });
 document.addEventListener("touchmove", function(event){//防止触屏时页面滑动
     event.preventDefault();
-});
+}, {passive: false}
+);
 document.addEventListener("touchend",function(event){//获取手指终止坐标并实现移动
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
